@@ -1,0 +1,65 @@
+k-anonymity
+========================
+k-anonymity is a property possessed by certain anonymized data.It is as an attempt to solve the problem: "Given person-specific field-
+
+structured data, produce a release of the data with scientific guarantees that the individuals who are the subjects of the data cannot be 
+
+re-identified while the data remain practically useful A release of data is said to have the k-anonymity property if the information for 
+
+each person contained in the release cannot be distinguished from at least  k - 1 individuals whose information also appear in the 
+
+release.
+
+Methods for k-anonymity
+
+There are two common methods for achieving k-anonymity for some value of k.
+
+	1.Suppression: In this method, certain values of the attributes are replaced by an asterisk '*'. All or some values of a column 	
+
+may be replaced by '*'. 
+	2.Generalization: In this method, individual values of attributes are replaced by with a broader category.
+
+
+l-diversity
+===================================
+l-diversity is a form of group based anonymization that is used to preserve privacy in data sets by reducing the granularity of a data 
+
+representation. This reduction is a trade off that results in some loss of effectiveness of data management or mining algorithms in order 
+
+to gain some privacy. The l-diversity model is an extension of the k-anonymity model which reduces the granularity of data representation 
+
+using techniques including generalization and suppression such that any given record maps onto at least k-1 other records in the data. The 
+
+l-diversity model handles some of the weaknesses in the k-anonymity model where protected identities to the level of k-individuals is not 
+
+equivalent to protecting the corresponding sensitive values that were generalized or suppressed, especially when the sensitive values 
+
+within a group exhibit homogeneity.
+
+
+
+Given the existence of Homogeneity Attack,Background Knowledge Attack  attacks where sensitive attributes may be inferred for k-anonymity 
+
+data, the l-diversity method was created to further k-anonymity by additionally maintaining the diversity of sensitive fields 
+
+
+
+
+
+t-closeness
+============================
+t-closeness is a further refinement of l-diversity group based anonymization that is used to preserve privacy in data sets by reducing the granularity of a data representation. This reduction is a trade off that results in some loss of effectiveness of data management or mining algorithms in order to gain some privacy. The t-closeness model extends the l-diversity model by treating the values of an attribute distinctly by taking into account the distribution of data values for that attribute.
+
+
+The t-closeness Principle: An equivalence class is said to have t-closeness if the distance between the distribution of a sensitive attribute in this class and the distribution of the attribute in the whole table is no more than a threshold t. A table is said to have t-closeness if all equivalence classes have t-closeness.
+
+
+Differential privacy
+====================================
+In cryptography, differential privacy aims to provide means to maximize the accuracy of queries from statistical databases while minimizing the chances of identifying its records.
+
+
+
+Reference :
+
+https://www.programcreek.com/java-api-examples/?code=arx-deidentifier/arx/arx-master/src/example/org/deidentifier/arx/examples/Example13.java#
